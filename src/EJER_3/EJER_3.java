@@ -1,15 +1,22 @@
+package EJER_3;
+
 import java.util.Scanner;
 
-public class EJER_1 {
+public class EJER_3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		System.out.println("Son " + grados(leerFloat()) + " grados Farenheit.");
-		
+	
+		System.out.println("Son " + velocidad(leerFloat()) + "m/s");
 		
 	}
-
+	
+	public static double velocidad (double velo){
+		double velo2= velo / 3.6;
+		return velo2;
+	}
+	
+	
 	public static float leerFloat() {
 
 		@SuppressWarnings("resource")
@@ -19,7 +26,7 @@ public class EJER_1 {
 		boolean error = false;
 
 		do {
-			System.out.println("Introduzca los grados Celsius:");
+			System.out.println("Introduzca una velociad en km/h:");
 			entrada = teclado.nextLine();
 
 			try {
@@ -35,12 +42,4 @@ public class EJER_1 {
 			} while (error);
 		return num;
 	}
-	
-	public static float grados(float grados){
-		
-		float gradosF=32 + (9 * grados/5);
-		
-		return gradosF;
-	}
-	
 }
