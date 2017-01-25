@@ -6,7 +6,9 @@ public class EJER_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("Introduzca la longitud del cateto A en cms:");
 		float cateto1=leerFloat();
+		System.out.println("Introduzca la longitud del cateto B en cms:");
 		float cateto2=leerFloat();
 		System.out.println("La hipotenusa es " + hipotenusa(cateto1, cateto2) + "cms");				
 	}
@@ -22,11 +24,11 @@ public class EJER_4 {
 		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 		String entrada = "";
-		float num = 0;
+		float num=0;
 		boolean error = false;
 
 		do {
-			System.out.println("Introduzca la longitud del cateto en cms:");
+			
 			entrada = teclado.nextLine();
 
 			try {
@@ -39,7 +41,7 @@ public class EJER_4 {
 				error = true;
 				System.out.println("Error generico, revisa la excepcion");
 				}
-			if (num<=0){
+			if (num<0){
 				error= true;
 				System.out.println("numero negativo, inutil.");
 			}
